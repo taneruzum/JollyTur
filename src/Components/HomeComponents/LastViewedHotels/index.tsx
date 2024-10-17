@@ -1,12 +1,12 @@
+import { LastViewedHotelsData } from "@/Mock/LastViewed";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CommentCard from "./CommentCard";
-import { LastComments } from "@/Mock/Comments";
+import ViewedCard from "./ViewedCard";
 
 
-export default function LastCommentsSwiper() {
+export default function LastViewedHotels() {
     return (
-        <div className='w-full'>
+        <section className="w-full">
             <Swiper
                 modules={[Autoplay]}
                 loop={true}
@@ -14,15 +14,15 @@ export default function LastCommentsSwiper() {
                     delay: 8000,
                     disableOnInteraction: false,
                 }}
-                spaceBetween={20}
+                spaceBetween={10}
                 slidesPerView={1.3}
             >
-                {LastComments.map((comm, index) => (
+                {LastViewedHotelsData.map((vis, index) => (
                     <SwiperSlide key={index}>
-                        <CommentCard data={comm} />
+                        <ViewedCard data={vis} />
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </section>
     )
 }

@@ -21,7 +21,7 @@ export default function TabsComponent() {
                     <Tabs.Tab value="general" className={classes.tab}>Genel Bakış</Tabs.Tab>
                     <Tabs.Tab value="possibilities" className={classes.tab}>Olanaklar</Tabs.Tab>
                     <Tabs.Tab value="rooms" className={classes.tab}>Odalar</Tabs.Tab>
-                    <Tabs.Tab value="offers" className={classes.tab}>Kampanyalar</Tabs.Tab>
+                    <Tabs.Tab value="promotions" className={classes.tab}>Kampanyalar</Tabs.Tab>
                 </Tabs.List>
 
                 <Tabs.Panel value="general">
@@ -76,7 +76,7 @@ export default function TabsComponent() {
 
                     <section className='flex flex-col gap-3'>
                         <h3 className='font-semibold text-sm text-customBlue2'>Odanı Seç</h3>
-                        <div className='flex justify-between *:rounded-[6px] *:border *:border-customDark2 *:pl-4 *:pr-12 *:py-2'>
+                        <div className='flex justify-between gap-3 *:w-full *:rounded-[6px] *:border *:border-customDark2 *:pl-4 *:pr-12 *:py-2'>
                             <div className='flex items-center gap-4'>
                                 <img src={date} alt="" className='w-[18px] h-[20px]' />
                                 <div className='flex flex-col gap-0 text-xs'>

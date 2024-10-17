@@ -16,3 +16,6 @@ export { default as redx } from '/icons/red_x.png';
 export { default as persons } from '/icons/persons.png';
 export { default as date_thin } from '/icons/date_thin.png';
 export { default as like } from '/icons/like.png';
+export { default as location } from '/icons/location.png';
+export { default as airplane } from '/icons/airplane.png';
+export { default as discount_blue } from '/icons/discount_blue.png';

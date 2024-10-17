@@ -7,6 +7,10 @@ import RoomCardData from '@/Mock/RoomCard'
 import { IRoomCard } from '@/types/RoomCard'
 import { persons, date_thin, like } from '@/Constants/icons';
 import LastCommentsSwiper from '@/Components/HomeComponents/LastComments'
+import otel_area from '/OtelArea/otel_area.png'
+import { location, airplane } from '@/Constants/icons';
+import PromotionsSection from '@/Components/HomeComponents/PromotionsSection'
+import LastViewedHotels from '@/Components/HomeComponents/LastViewedHotels'
 
 export default function HomePage() {
 
@@ -67,7 +71,7 @@ export default function HomePage() {
         <button
           className='w-full py-2 border border-customBlue3 rounded-[6px] text-sm text-customBlue3 font-semibold'
         >
-          + 4 Oda Tipi Daha Göre
+          + 4 Oda Tipi Daha Gör
         </button>
       </section>
       <section className='flex flex-col gap-2'>
@@ -99,6 +103,41 @@ export default function HomePage() {
       <section className='flex flex-col gap-3'>
         <h3 className='font-semibold text-sm text-customBlue2'>Son Yorumlar</h3>
         <LastCommentsSwiper />
+      </section>
+      <section className='flex flex-col gap-3'>
+        <h3 className='font-semibold text-sm text-customBlue2'>Otel Çevresini Keşfet</h3>
+        <h4 className='text-xs text-customBlue2' >Antalya / Kemer / Beldibi</h4>
+        <div className='w-full overflow-hidden rounded-[10px] '>
+          <img src={otel_area} alt="Otel'in Çevresinin Görüntüsü" className='aspect-[327/143] object-cover object-center' />
+        </div>
+        <button className='text-start text-[10px] text-customBlue3'>
+          Haritada Görüntüle
+        </button>
+        <div className='w-full flex flex-col gap-2 text-[11px] text-customBlue2 *:w-full *:flex *:items-center *:justify-between'>
+          <div>
+            <div className='flex items-center gap-4'><img src={location} alt="Konum İkonu" className='w-[11px] h-3.5' />Kemer</div>
+            <span>15km</span>
+          </div>
+          <div>
+            <div className='flex items-center gap-4'><img src={location} alt="Konum İkonu" className='w-[11px] h-3.5' />Antalya</div>
+            <span>30km</span>
+          </div>
+          <div>
+            <div className='flex items-center gap-2.5'><img src={airplane} alt="Uçak İkonu" className='size-4' />Antalya Havalimanı</div>
+            <span>45km</span>
+          </div>
+          <div>
+            <div className='flex items-center gap-2.5'>
+              <img src={airplane} alt="Uçak İkonu" className='size-4' />Gazipaşa Havalimanı
+            </div>
+            <span>45km</span>
+          </div>
+        </div>
+      </section>
+      <PromotionsSection />
+      <section className='flex flex-col gap-3'>
+        <h3 className='font-semibold text-sm text-customBlue2'>En Son Baktığınız Oteller</h3>
+        <LastViewedHotels />
       </section>
     </div>
   )

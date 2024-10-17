@@ -20,6 +20,7 @@ export default {
         customDark:"#666666",
         customDark2:"#DDDDDD",
         customDark3:'#333333',
+        customDark4:'#F1F3F7',
 
 
  
