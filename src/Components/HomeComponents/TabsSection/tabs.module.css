@@ -1,0 +1,10 @@
+.tab {
+    z-index: 1;
+    font-weight: 500;
+    transition: color 100ms ease;
+    color: #666666; /* Pasif durum rengi */
+  
+    &[data-active] {
+      color: #0065B8; /* Aktif durum rengi */
+    }
+}
