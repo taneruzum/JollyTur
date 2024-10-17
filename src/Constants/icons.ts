@@ -19,3 +19,6 @@ export { default as like } from '/icons/like.png';
 export { default as location } from '/icons/location.png';
 export { default as airplane } from '/icons/airplane.png';
 export { default as discount_blue } from '/icons/discount_blue.png';
+export { default as lifebuoy } from '/icons/lifebuoy.png';
+export { default as question_mark } from '/icons/question_mark.png';
+export { default as location_outline } from '/icons/location-outline.png';

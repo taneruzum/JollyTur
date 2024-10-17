@@ -1,14 +1,15 @@
 import { IHotelData } from "@/types/LastViewed";
-
+import { location_outline } from '@/Constants/icons'
 
 export default function ViewedCard({ data }: { data: IHotelData }) {
     return (
-        <div className="flex flex-col justify-between gap-5 p-2.5 border border-customDark2/85 rounded-lg">
+        <div className="h-80 flex flex-col justify-between gap-5 p-2.5 border border-customDark2/85 rounded-lg">
             <section className="flex flex-col gap-2">
                 <img src={data.imageUrl} alt={data.name} className="aspect-[246/153] rounded-lg object-cover object-center" />
                 <div className="flex flex-col gap-1">
                     <h4 className="text-sm text-customBlue2 font-semibold">{data.name}</h4>
-                    <span className="text-[11px] text-customBlue">{data.location}</span>
+                    <span className="flex items-center gap-2 text-[11px] text-customBlue">
+                        <img src={location_outline} alt="Konum İkonu" className="w-2 h-3 mb-0.5" /> {data.location}</span>
                     <span className="text-[11px] text-customBlue2">{data.packageType}</span>
                 </div>
             </section>

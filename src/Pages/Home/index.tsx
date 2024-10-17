@@ -8,7 +8,7 @@ import { IRoomCard } from '@/types/RoomCard'
 import { persons, date_thin, like } from '@/Constants/icons';
 import LastCommentsSwiper from '@/Components/HomeComponents/LastComments'
 import otel_area from '/OtelArea/otel_area.png'
-import { location, airplane } from '@/Constants/icons';
+import { location, airplane, lifebuoy, question_mark } from '@/Constants/icons';
 import PromotionsSection from '@/Components/HomeComponents/PromotionsSection'
 import LastViewedHotels from '@/Components/HomeComponents/LastViewedHotels'
 
@@ -16,7 +16,16 @@ export default function HomePage() {
 
 
   return (
-    <div className='w-full min-h-[3000px] py-2 flex flex-col gap-6 *:w-full'>
+    <div className='relative w-full min-h-[3000px] py-2 flex flex-col gap-6 *:w-full'>
+      <div className='fixed z-50 left-0 bottom-0 w-full flex items-center justify-between bg-white shadow-inner px-5 py-3'>
+        <section className='flex flex-col gap-1'>
+          <span className='text-sm text-customBlue2 font-semibold'>70.243 TL</span>
+          <span className='text-xs text-customDark'>6 Gece</span>
+        </section>
+        <button className='px-6 py-2 bg-customBlue3 text-xs text-white font-semibold rounded-md'>
+          Oda Seç
+        </button>
+      </div>
       <SwiperComp />
       <section className='w-full flex flex-col gap-2'>
         <h2 className='text-customBlue2 text-base font-semibold'>Nirvana Mediterranean Excellence</h2>
@@ -139,6 +148,17 @@ export default function HomePage() {
         <h3 className='font-semibold text-sm text-customBlue2'>En Son Baktığınız Oteller</h3>
         <LastViewedHotels />
       </section>
+      <section>
+        <div className='w-full px-4 py-2 flex items-center justify-between border border-customDark2/80 rounded-[6px] bg-white'>
+          <img src={lifebuoy} alt="Can Simidi İkonu" className='size-7' />
+          <div className='flex flex-col gap-1 -ml-6'>
+            <span className='text-xs text-black font-semibold'>İptal Güvence Paketi</span>
+            <span className='text-[11px] text-customBlue3'>72 saat kala iptal veya değişiklik hakkı</span>
+          </div>
+          <img src={question_mark} alt="Soru İşareti Baloncuk İkonu" className='size-5' />
+        </div>
+      </section>
+      <div className='w-full h-px bg-customDark2/80' />
     </div>
   )
 }
