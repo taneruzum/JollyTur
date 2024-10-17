@@ -6,7 +6,7 @@ export default function PromotionsSection() {
     return (
         <section className="flex flex-col gap-3">
             <h3 className='font-semibold text-sm text-customBlue2'>Kampanyalar</h3>
-            <div className="w-full flex flex-row items-center gap-4">
+            <div className="w-full flex flex-row items-center justify-between gap-4 *:w-full">
                 <div className=" min-w-[164px] flex flex-col gap-1.5 pl-4 p-2 py border border-customDark2/85 rounded-[6px]">
                     <img src={discount_blue} alt="Mavi İndirim Görseli" className='size-[17px]' />
                     <div className='flex flex-col font-semibold text-xs text-customBlue3'>

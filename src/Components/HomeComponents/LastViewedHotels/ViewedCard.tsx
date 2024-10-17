@@ -3,7 +3,7 @@ import { location_outline } from '@/Constants/icons'
 
 export default function ViewedCard({ data }: { data: IHotelData }) {
     return (
-        <div className="h-80 flex flex-col justify-between gap-5 p-2.5 border border-customDark2/85 rounded-lg">
+        <div className="h-[360px] flex flex-col justify-between gap-5 p-2.5 border border-customDark2/85 rounded-lg">
             <section className="flex flex-col gap-2">
                 <img src={data.imageUrl} alt={data.name} className="aspect-[246/153] rounded-lg object-cover object-center" />
                 <div className="flex flex-col gap-1">
