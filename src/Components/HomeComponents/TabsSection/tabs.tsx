@@ -2,22 +2,39 @@ import { useState } from 'react'
 import { Tabs } from '@mantine/core';
 import classes from './tabs.module.css'
 import { IoIosArrowForward } from "react-icons/io";
-import { bar, beach, bell, date, person, pets, spa, star, waves } from '@/Constants/icons';
+import { bar, beach, bell, pets, spa, star, waves } from '@/Constants/icons';
+import SwiperComp from '../HeroSection/swiper';
+import ChooseRoomSection from './ChooseRoom';
 
 
 export default function TabsComponent() {
     const [activeTab, setActiveTab] = useState<string | null>('general');
+
     return (
-        <>
+        <section className='w-full flex flex-col gap-4 '>
+            {/**For Mobile */}
+            <section className='xl:hidden w-full flex flex-col gap-2'>
+                <h2 className='text-customBlue2 text-base font-semibold'>Nirvana Mediterranean Excellence</h2>
+                <div className='flex items-center gap-2'>
+                    <div className='px-2 py-[1px] bg-customGreen2 rounded-[3px] text-customGreen text-xs'>
+                        4.5
+                    </div>
+                    <span className='text-customBlue2 text-xs font-semibold'>
+                        +1200 Değerlendirme
+                    </span>
+                </div>
+            </section>
             <Tabs
                 value={activeTab}
                 onChange={setActiveTab}
+                className='flex flex-col gap-2'
                 classNames={{
                     tab: "!text-xs !px-2",
-                    panel: "!mt-4 !flex !flex-col !gap-4"
+                    list: "",
+                    panel: "!flex xl:!gap-7"
                 }}
             >
-                <Tabs.List grow justify="space-between">
+                <Tabs.List className='flex w-full grow xl:grow-0'>
                     <Tabs.Tab value="general" className={classes.tab}>Genel Bakış</Tabs.Tab>
                     <Tabs.Tab value="possibilities" className={classes.tab}>Olanaklar</Tabs.Tab>
                     <Tabs.Tab value="rooms" className={classes.tab}>Odalar</Tabs.Tab>
@@ -25,84 +42,86 @@ export default function TabsComponent() {
                 </Tabs.List>
 
                 <Tabs.Panel value="general">
-                    <section className='flex justify-around py-2 px-1 bg-customBlue4 rounded-[6px]'>
-                        <img src={star} alt="Yıldız İkonu" className='size-3.5 text-black' />
-                        <span className='font-semibold text-xs text-customBlue2'>Her şey dahil bu tatil ile kendinizi şımartın</span>
-                        <img src={star} alt="Yıldız İkonu" className='size-3.5 text-black' />
-                    </section>
-
-                    <section className='w-full flex flex-col gap-3'>
-                        <h3 className='font-semibold text-xs text-customBlue2'>Olanaklar</h3>
-                        <div className='w-full grid grid-cols-2 gap-3 *:flex *:items-center *:text-xs *:text-customDark *:gap-3'>
-                            <span>
-                                <img src={waves} alt="Dalga İkonu" className='w-5 h-3' />
-                                Denize Sıfır
-                            </span>
-                            <span>
-                                <img src={bell} alt="Dalga İkonu" className='w-5 h-4' />
-                                A La Carte Restorant
-                            </span>
-                            <span>
-                                <img src={spa} alt="Dalga İkonu" className='w-4 h-4' />
-                                Spa
-                            </span>
-                            <span>
-                                <img src={beach} alt="Dalga İkonu" className='w-4 h-4' />
-                                Özel Plaj
-                            </span>
-                            <span>
-                                <img src={bar} alt="Dalga İkonu" className='w-4 h-4' />
-                                Bar
-                            </span>
-                            <span>
-                                <img src={pets} alt="Dalga İkonu" className='w-4 h-4' />
-                                Evcil Hayvan
-                            </span>
-                        </div>
-                        <button className='flex items-center gap-2 text-[10px] text-customBlue3'>
-                            Daha Fazla <IoIosArrowForward className='size-2.5' />
-                        </button>
-                    </section>
-
-                    <section className='flex flex-col gap-3'>
-                        <h3 className='font-semibold text-xs text-customBlue2'>Otel Bilgileri</h3>
-                        <p className='text-xs text-customDark font-light'>
-                            Kemer’de aradığınız o mükemmel tatilin adresi Nirvana Mediterranean Excellence, Görkemli manzarası, denize sıfır plajı ve ayrıcalıklı Nirvana Mediterranean Excellence sedir evleri ile tatil hiç bu kadar güzel olmamıştı...
-                        </p>
-                        <button className='flex items-center gap-2 text-[10px] text-customBlue3'>
-                            Daha Fazla <IoIosArrowForward className='size-2.5' />
-                        </button>
-                    </section>
-
-                    <section className='flex flex-col gap-3'>
-                        <h3 className='font-semibold text-sm text-customBlue2'>Odanı Seç</h3>
-                        <div className='flex justify-between gap-3 *:w-full *:rounded-[6px] *:border *:border-customDark2 *:pl-4 *:pr-12 *:py-2'>
-                            <div className='flex items-center gap-4'>
-                                <img src={date} alt="" className='w-[18px] h-[20px]' />
-                                <div className='flex flex-col gap-0 text-xs'>
-                                    <span className='text-customBlue2'>Giriş Tarihi</span>
-                                    <span className='text-customDark'>08/10/2024</span>
+                    <div className='mt-4 max-w-[632px] flex flex-col gap-4'>
+                        <section className='hidden w-full xl:flex flex-col gap-2'>
+                            <h2 className='text-customBlue2 text-base font-semibold xl:text-2xl'>Nirvana Mediterranean Excellence</h2>
+                            <div className='flex items-center gap-2'>
+                                <div className='px-2 py-1 bg-customGreen2 rounded-[3px] text-customGreen text-xs xl:text-sm'>
+                                    4.5
                                 </div>
+                                <span className='font-semibold text-customBlue2 text-xs xl:text-sm'>
+                                    +1200 Değerlendirme
+                                </span>
                             </div>
-                            <div className='flex items-center gap-4'>
-                                <img src={date} alt="" className='w-[18px] h-[20px]' />
-                                <div className='flex flex-col gap-0 text-xs'>
-                                    <span className='text-customBlue2'>Çıkış Tarihi</span>
-                                    <span className='text-customDark'>08/10/2024</span>
-                                </div>
+                        </section>
+                        <section className='max-w-[526px] w-full flex justify-around py-4 px-1 bg-customBlue4 rounded-[6px]'>
+                            <img src={star} alt="Yıldız İkonu" className='size-3.5 text-black' />
+                            <span className="font-semibold text-xs text-customBlue2 block xl:hidden">
+                                Her şey dahil bu tatil ile kendinizi şımartın
+                            </span>
+                            <span className=" font-semibold text-xs text-customBlue2 hidden xl:block">
+                                Her şey dahil bu tatil ile kendinizi şımartmanın büyülü dünyasını keşfedin.
+                            </span>
+                            <img src={star} alt="Yıldız İkonu" className='size-3.5 text-black' />
+                        </section>
+
+                        <section className='max-w-[440px] w-full flex flex-col gap-3'>
+                            <h3 className='font-semibold text-customBlue2 text-xs xl:text-base '>Olanaklar</h3>
+                            <div className='w-full grid grid-cols-2 gap-3 *:flex *:items-center *:text-xs *:text-customDark *:gap-3'>
+                                <span>
+                                    <img src={waves} alt="Dalga İkonu" className='w-5 h-3' />
+                                    Denize Sıfır
+                                </span>
+                                <span>
+                                    <img src={bell} alt="Dalga İkonu" className='w-5 h-4' />
+                                    A La Carte Restorant
+                                </span>
+                                <span>
+                                    <img src={spa} alt="Dalga İkonu" className='w-4 h-4' />
+                                    Spa
+                                </span>
+                                <span>
+                                    <img src={beach} alt="Dalga İkonu" className='w-4 h-4' />
+                                    Özel Plaj
+                                </span>
+                                <span>
+                                    <img src={bar} alt="Dalga İkonu" className='w-4 h-4' />
+                                    Bar
+                                </span>
+                                <span>
+                                    <img src={pets} alt="Dalga İkonu" className='w-4 h-4' />
+                                    Evcil Hayvan
+                                </span>
                             </div>
+                            <button className='xl:hidden flex items-center gap-2 text-[10px] text-customBlue3'>
+                                Daha Fazla <IoIosArrowForward className='size-2.5' />
+                            </button>
+                            <button className='hidden xl:flex items-center gap-2 text-[10px] text-customBlue3'>
+                                Tüm Olanakları Gör <IoIosArrowForward className='size-2.5' />
+                            </button>
+                        </section>
+
+                        <section className='flex flex-col gap-3'>
+                            <h3 className='font-semibold text-customBlue2 text-xs xl:text-base'>Otel Bilgileri</h3>
+                            <p className='text-xs text-customDark font-light'>
+                                Kemer’de aradığınız o mükemmel tatilin adresi Nirvana Mediterranean Excellence, Görkemli manzarası, denize sıfır plajı ve ayrıcalıklı Nirvana Mediterranean Excellence sedir evleri ile tatil hiç bu kadar güzel olmamıştı...
+                            </p>
+                            <button className='flex items-center gap-2 text-[10px] xl:text-xs text-customBlue3'>
+                                Daha Fazla <IoIosArrowForward className='size-2.5' />
+                            </button>
+                        </section>
+                        <div className='block xl:hidden'>
+                            <ChooseRoomSection />
                         </div>
-                        <div className='w-full flex items-center gap-4 rounded-[6px] border border-customDark2 pl-4 pr-12 py-2'>
-                            <img src={person} alt="" className='w-[18px] h-[20px]' />
-                            <div className='flex flex-col gap-0 text-xs'>
-                                <span className='text-customBlue2'>Misafir</span>
-                                <span className='text-customDark'>1 Oda 2 Kişi</span>
-                            </div>
-                        </div>
-                        <button className='w-full text-white text-center uppercase font-semibold bg-customBlue3 py-3 rounded-[6px]' >Güncelle</button>
-                    </section>
+                    </div>
+                    <div className='hidden xl:block'>
+                        <SwiperComp />
+                    </div>
                 </Tabs.Panel>
+                <div className='hidden xl:block'>
+                    <ChooseRoomSection />
+                </div>
             </Tabs>
-        </>
+        </section>
     )
 }

@@ -5,9 +5,10 @@ import { Autoplay } from 'swiper/modules'
 
 export default function SwiperComp() {
   return (
-    <div className='w-full'>
+    <div className='w-full xl:w-[640px] xl:order-2 '>
       <Swiper
         modules={[Autoplay]}
+        loop={true}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
@@ -20,8 +21,8 @@ export default function SwiperComp() {
           <SwiperSlide
             key={index}
           >
-            <div className='relative w-full  overflow-hidden rounded-[6px]'>
-              <img src={image} alt={`Swiper Image ${index}`} className='w-full aspect-[336/218] object-cover' />
+            <div className='relative w-full  overflow-hidden'>
+              <img src={image} alt={`Swiper Image ${index}`} className='w-full xl:w-[636px] aspect-[336/218] object-cover rounded-[6px]' />
             </div>
           </SwiperSlide>
         ))}

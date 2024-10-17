@@ -14,9 +14,9 @@ import LastViewedHotels from '@/Components/HomeComponents/LastViewedHotels'
 
 export default function HomePage() {
 
-
   return (
     <div className='relative w-full min-h-[3000px] py-2 flex flex-col gap-6 *:w-full'>
+      {/** Stick Info Section */}
       <div className='fixed z-50 left-0 bottom-0 w-full flex items-center justify-between bg-white shadow-inner px-5 py-3'>
         <section className='flex flex-col gap-1'>
           <span className='text-sm text-customBlue2 font-semibold'>70.243 TL</span>
@@ -26,19 +26,12 @@ export default function HomePage() {
           Oda Seç
         </button>
       </div>
-      <SwiperComp />
-      <section className='w-full flex flex-col gap-2'>
-        <h2 className='text-customBlue2 text-base font-semibold'>Nirvana Mediterranean Excellence</h2>
-        <div className='flex items-center gap-2'>
-          <div className='px-2 py-1 bg-customGreen2 rounded-[3px] text-customGreen text-xs'>
-            4.5
-          </div>
-          <span className='text-customBlue2 text-xs font-semibold'>
-            +1200 Değerlendirme
-          </span>
+
+      <section className='w-full flex flex-col xl:flex-row xl:justify-between gap-6'>
+        {/** Hero Section Swiper */}
+        <div className='w-full xl:hidden'>
+          <SwiperComp />
         </div>
-      </section>
-      <section className=''>
         <TabsComponent />
       </section>
       <section className='flex flex-col gap-4'>
