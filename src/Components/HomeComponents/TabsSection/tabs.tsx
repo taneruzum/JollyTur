@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { Tabs } from '@mantine/core';
 import classes from './tabs.module.css'
 import { IoIosArrowForward } from "react-icons/io";
-import { bar, beach, bell, pets, spa, star, waves } from '@/Constants/icons';
 import SwiperComp from '../HeroSection/swiper';
 import ChooseRoomSection from './ChooseRoom';
+import IconComponent from '@/Components/Icons/IconComponent';
 
 
 export default function TabsComponent() {
@@ -31,7 +31,7 @@ export default function TabsComponent() {
                 classNames={{
                     tab: "!text-xs !px-2",
                     list: "",
-                    panel: "!flex xl:!gap-7"
+                    panel: "!flex xl:!gap-7 xl:!justify-between"
                 }}
             >
                 <Tabs.List className='flex w-full grow xl:grow-0'>
@@ -55,41 +55,41 @@ export default function TabsComponent() {
                             </div>
                         </section>
                         <section className='max-w-[526px] w-full flex justify-around py-4 px-1 bg-customBlue4 rounded-[6px]'>
-                            <img src={star} alt="Yıldız İkonu" className='size-3.5 text-black' />
+                            <IconComponent name="star" alt="Yıldız İkonu" className='size-3.5 text-black' />
                             <span className="font-semibold text-xs text-customBlue2 block xl:hidden">
                                 Her şey dahil bu tatil ile kendinizi şımartın
                             </span>
                             <span className=" font-semibold text-xs text-customBlue2 hidden xl:block">
                                 Her şey dahil bu tatil ile kendinizi şımartmanın büyülü dünyasını keşfedin.
                             </span>
-                            <img src={star} alt="Yıldız İkonu" className='size-3.5 text-black' />
+                            <IconComponent name="star" alt="Yıldız İkonu" className='size-3.5 text-black' />
                         </section>
 
                         <section className='max-w-[440px] w-full flex flex-col gap-3'>
                             <h3 className='font-semibold text-customBlue2 text-xs xl:text-base '>Olanaklar</h3>
                             <div className='w-full grid grid-cols-2 gap-3 *:flex *:items-center *:text-xs *:text-customDark *:gap-3'>
                                 <span>
-                                    <img src={waves} alt="Dalga İkonu" className='w-5 h-3' />
+                                    <IconComponent name="waves" className='w-5 h-3' />
                                     Denize Sıfır
                                 </span>
                                 <span>
-                                    <img src={bell} alt="Dalga İkonu" className='w-5 h-4' />
+                                    <IconComponent name="bell" className='w-5 h-4' />
                                     A La Carte Restorant
                                 </span>
                                 <span>
-                                    <img src={spa} alt="Dalga İkonu" className='w-4 h-4' />
+                                    <IconComponent name="spa" className='w-4 h-4' />
                                     Spa
                                 </span>
                                 <span>
-                                    <img src={beach} alt="Dalga İkonu" className='w-4 h-4' />
+                                    <IconComponent name="beach" className='w-4 h-4' />
                                     Özel Plaj
                                 </span>
                                 <span>
-                                    <img src={bar} alt="Dalga İkonu" className='w-4 h-4' />
+                                    <IconComponent name="bar" className='w-4 h-4' />
                                     Bar
                                 </span>
                                 <span>
-                                    <img src={pets} alt="Dalga İkonu" className='w-4 h-4' />
+                                    <IconComponent name="pets" className='w-4 h-4' />
                                     Evcil Hayvan
                                 </span>
                             </div>

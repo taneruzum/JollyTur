@@ -1,5 +1,5 @@
+import IconComponent from "@/Components/Icons/IconComponent";
 import { IHotelData } from "@/types/LastViewed";
-import { location_outline } from '@/Constants/icons'
 
 export default function ViewedCard({ data }: { data: IHotelData }) {
     return (
@@ -9,7 +9,8 @@ export default function ViewedCard({ data }: { data: IHotelData }) {
                 <div className="flex flex-col gap-1">
                     <h4 className="text-sm text-customBlue2 font-semibold">{data.name}</h4>
                     <span className="flex items-center gap-2 text-[11px] text-customBlue">
-                        <img src={location_outline} alt="Konum İkonu" className="w-2 h-3 mb-0.5" /> {data.location}</span>
+                        <IconComponent name="locationOutline" alt="Konum İkonu" className='w-2 h-3 mb-0.5' /> {data.location}
+                    </span>
                     <span className="text-[11px] text-customBlue2">{data.packageType}</span>
                 </div>
             </section>
