@@ -6,12 +6,13 @@ import PromotionsSection from '@/Components/HomeComponents/PromotionsSection';
 import LastViewedHotels from '@/Components/HomeComponents/LastViewedHotels';
 import RoomDetailsSection from '@/Components/HomeComponents/RoomDetailsSection';
 import IconComponent from '@/Components/Icons/IconComponent';
+import advantagesImage from '/advantagesImage.png'
 
 export default function HomePage() {
   return (
     <div className='relative w-full min-h-[3000px] py-2 flex flex-col gap-6 *:w-full'>
       {/** Stick Info Section */}
-      <div className='fixed z-50 left-0 bottom-0 w-full flex items-center justify-between bg-white shadow-inner px-5 py-3'>
+      <div className='xl:hidden fixed z-50 left-0 bottom-0 w-full flex items-center justify-between bg-white shadow-inner px-5 py-3'>
         <section className='flex flex-col gap-1'>
           <span className='text-sm text-customBlue2 font-semibold'>70.243 TL</span>
           <span className='text-xs text-customDark'>6 Gece</span>
@@ -210,10 +211,10 @@ export default function HomePage() {
       </section>
       <PromotionsSection />
       <section className='flex flex-col gap-3'>
-        <h3 className='font-semibold text-sm text-customBlue2'>En Son Baktığınız Oteller</h3>
+        <h3 className='font-semibold text-sm text-customBlue2 xl:text-2xl'>En Son Baktığınız Oteller</h3>
         <LastViewedHotels />
       </section>
-      <section>
+      <section className='xl:hidden block'>
         <div className='w-full px-4 py-2 flex items-center justify-between border border-customDark2/80 rounded-[6px] bg-white'>
           <IconComponent name="lifebuoy" alt="Can Simidi İkonu" className='size-7' />
           <div className='flex flex-col gap-1 -ml-6'>
@@ -223,7 +224,10 @@ export default function HomePage() {
           <IconComponent name="questionMark" alt="Soru İşareti Baloncuk İkonu" className='size-5' />
         </div>
       </section>
-      <div className='w-full h-px bg-customDark2/80' />
+      <div className='w-full'>
+        <img src={advantagesImage} alt="Avantajlar Hakkında" />
+      </div>
+      <div className='xl:hidden block w-full h-px bg-customDark2/80' />
     </div>
   );
 }
