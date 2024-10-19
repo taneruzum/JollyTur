@@ -29,7 +29,7 @@ export default function RoomPricingCard({ data }: IRoomCardProps) {
                     <div className='w-fit rounded-[2.5px] bg-customGreen3 text-center px-2 py-1 text-white text-[11px]'>
                         %{data.discountRate} İndirim
                     </div>
-                    <span className='text-xs text-customDark font-light '> {data.originalPrice.toLocaleString()} TL</span>
+                    <span className='text-xs text-customDark font-light line-through'> {data.originalPrice.toLocaleString()} TL</span>
                 </div>
                 <span className='text-lg font-semibold text-customBlue2 xl:text-2xl'> {data.discountedPrice.toLocaleString()} TL</span>
                 <span className='text-[10px] font-light'>Tüm vergiler dahildir</span>

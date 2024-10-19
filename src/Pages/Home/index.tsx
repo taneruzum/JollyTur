@@ -7,6 +7,7 @@ import LastViewedHotels from '@/Components/HomeComponents/LastViewedHotels';
 import RoomDetailsSection from '@/Components/HomeComponents/RoomDetailsSection';
 import IconComponent from '@/Components/Icons/IconComponent';
 import advantagesImage from '/advantagesImage.png'
+import { IoIosArrowForward } from 'react-icons/io';
 
 export default function HomePage() {
   return (
@@ -203,6 +204,9 @@ export default function HomePage() {
               </div>
               <span>45km</span>
             </div>
+            <button className='!hidden xl:!flex items-center !justify-start gap-2 text-xs text-customBlue5'>
+              Daha Fazla <IoIosArrowForward className='size-2.5' />
+            </button>
           </div>
         </div>
         <div className='hidden xl:block w-full overflow-hidden rounded-[10px] '>

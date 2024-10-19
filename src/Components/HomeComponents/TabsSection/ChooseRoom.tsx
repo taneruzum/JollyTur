@@ -1,6 +1,5 @@
 import IconComponent from "@/Components/Icons/IconComponent";
-
-
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function ChooseRoomSection() {
     return (
@@ -21,14 +20,17 @@ export default function ChooseRoomSection() {
                         <span className='text-customDark xl:text-sm'>08/10/2024</span>
                     </div>
                 </div>
-                <div className='w-full flex items-center gap-4 rounded-[6px] border border-customDark2 pl-4 pr-12'>
-                <IconComponent name="person" alt="Kişi İkonu" className='w-[18px] h-[20px] xl:w-[19px] xl:h-[21px]' />
-                    <div className='flex flex-col gap-0 text-xs'>
-                        <span className='text-customBlue2'>Misafir</span>
-                        <span className='text-customDark xl:text-sm'>1 Oda 2 Kişi</span>
+                <div className='w-full flex items-center justify-between rounded-[6px] border border-customDark2 !pr-4'>
+                    <div className="w-full flex items-center gap-4">
+                        <IconComponent name="person" alt="Kişi İkonu" className='w-[18px] h-[20px] xl:w-[19px] xl:h-[21px]' />
+                        <div className='flex flex-col gap-0 text-xs'>
+                            <span className='text-customBlue2'>Misafir</span>
+                            <span className='text-customDark xl:text-sm'>1 Oda 2 Kişi</span>
+                        </div>
                     </div>
+                    <IoIosArrowDown className="size-5 text-customDark2/85" />
                 </div>
-                <button className='w-full text-white text-center uppercase font-semibold bg-customBlue3 !py-3 rounded-[6px]' >Güncelle</button>
+                <button className='w-full text-white text-center uppercase font-semibold bg-customBlue3 !py-3 !px-0 rounded-[6px]' >Güncelle</button>
             </div>
         </section>
     )
