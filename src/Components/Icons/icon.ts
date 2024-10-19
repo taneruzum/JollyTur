@@ -28,5 +28,6 @@ const iconsPack = {
     group:'/icons/group.png',
     family:'/icons/family.png',
     heart:'/icons/heart.png',
+    imageFill:'/icons/image_fill.png',
 };
 export default iconsPack; 

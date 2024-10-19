@@ -161,44 +161,51 @@ export default function HomePage() {
         <h3 className='font-semibold text-sm text-customBlue2'>Son Yorumlar</h3>
         <LastCommentsSwiper />
       </section>
-      <section className='flex flex-col gap-3'>
-        <h3 className='font-semibold text-sm text-customBlue2'>Otel Çevresini Keşfet</h3>
-        <h4 className='text-xs text-customBlue2'>Antalya / Kemer / Beldibi</h4>
-        <div className='w-full overflow-hidden rounded-[10px] '>
-          <img src={otel_area} alt="Otel'in Çevresinin Görüntüsü" className='aspect-[327/143] object-cover object-center' />
+      <section className='flex flex-col gap-3 xl:flex-row xl:gap-16'>
+        <div className='flex flex-col gap-3 xl:w-full xl:max-w-[370px]'>
+          <div className='flex flex-col gap-3'>
+            <h3 className='font-semibold text-sm text-customBlue2 xl:text-2xl'>Otel Çevresini Keşfet</h3>
+            <h4 className='text-xs text-customBlue2 xl:text-sm'>Antalya / Kemer / Beldibi</h4>
+          </div>
+          <div className='w-full overflow-hidden rounded-[10px] xl:hidden'>
+            <img src={otel_area} alt="Otel'in Çevresinin Görüntüsü" className='aspect-[327/143] object-cover object-center' />
+          </div>
+          <button className='text-start text-[10px] text-customBlue3 xl:hidden'>
+            Haritada Görüntüle
+          </button>
+          <div className='w-full flex flex-col gap-2 text-[11px] xl:text-sm text-customBlue2 *:w-full *:flex *:items-center *:justify-between'>
+            <div>
+              <div className='flex items-center gap-4'>
+                <IconComponent name="location" alt="Konum İkonu" className='w-[11px] h-3.5' />
+                Kemer
+              </div>
+              <span>15km</span>
+            </div>
+            <div>
+              <div className='flex items-center gap-4'>
+                <IconComponent name="location" alt="Konum İkonu" className='w-[11px] h-3.5' />
+                Antalya
+              </div>
+              <span>30km</span>
+            </div>
+            <div>
+              <div className='flex items-center gap-2.5'>
+                <IconComponent name="airplane" alt="Uçak İkonu" className='size-4' />
+                Antalya Havalimanı
+              </div>
+              <span>45km</span>
+            </div>
+            <div>
+              <div className='flex items-center gap-2.5'>
+                <IconComponent name="airplane" alt="Uçak İkonu" className='size-4' />
+                Gazipaşa Havalimanı
+              </div>
+              <span>45km</span>
+            </div>
+          </div>
         </div>
-        <button className='text-start text-[10px] text-customBlue3'>
-          Haritada Görüntüle
-        </button>
-        <div className='w-full flex flex-col gap-2 text-[11px] text-customBlue2 *:w-full *:flex *:items-center *:justify-between'>
-          <div>
-            <div className='flex items-center gap-4'>
-              <IconComponent name="location" alt="Konum İkonu" className='w-[11px] h-3.5' />
-              Kemer
-            </div>
-            <span>15km</span>
-          </div>
-          <div>
-            <div className='flex items-center gap-4'>
-              <IconComponent name="location" alt="Konum İkonu" className='w-[11px] h-3.5' />
-              Antalya
-            </div>
-            <span>30km</span>
-          </div>
-          <div>
-            <div className='flex items-center gap-2.5'>
-              <IconComponent name="airplane" alt="Uçak İkonu" className='size-4' />
-              Antalya Havalimanı
-            </div>
-            <span>45km</span>
-          </div>
-          <div>
-            <div className='flex items-center gap-2.5'>
-              <IconComponent name="airplane" alt="Uçak İkonu" className='size-4' />
-              Gazipaşa Havalimanı
-            </div>
-            <span>45km</span>
-          </div>
+        <div className='hidden xl:block w-full overflow-hidden rounded-[10px] '>
+          <img src={otel_area} alt="Otel'in Çevresinin Görüntüsü" className='aspect-[327/143] object-cover object-center' />
         </div>
       </section>
       <PromotionsSection />
