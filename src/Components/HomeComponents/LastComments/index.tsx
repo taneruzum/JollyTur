@@ -40,7 +40,7 @@ export default function LastCommentsSwiper() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="absolute z-10 right-0 top-0 w-1/3 h-full bg-gradient-to-l from-white to-transparent" />
+            <div className="hidden xl:block absolute z-10 right-0 top-0 w-1/3 h-full bg-gradient-to-l from-white to-transparent" />
         </div>
     )
 }
