@@ -23,5 +23,10 @@ const iconsPack = {
     lifebuoy: '/icons/lifebuoy.png',
     questionMark: '/icons/question_mark.png',
     locationOutline: '/icons/location-outline.png',
+    businessOutline:'/icons/business-outline.png',
+    personOutline:'/icons/person_outline.png',
+    group:'/icons/group.png',
+    family:'/icons/family.png',
+    heart:'/icons/heart.png',
 };
 export default iconsPack; 

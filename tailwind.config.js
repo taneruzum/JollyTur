@@ -10,6 +10,7 @@ export default {
         customBlue2:"#28374F",
         customBlue3:'#0065B8',
         customBlue4:'#F3F9FF',
+        customBlue5:'#3394DE',
 
 
         customGreen:"#2FA252",

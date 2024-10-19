@@ -2,9 +2,26 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CommentCard from "./CommentCard";
 import { LastComments } from "@/Mock/Comments";
+import { useEffect, useState } from "react";
 
 
 export default function LastCommentsSwiper() {
+    const [slidesPerView, setSlidesPerView] = useState<number>(1.3);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1280) {
+                setSlidesPerView(1.3);
+            } else {
+                setSlidesPerView(2.5);
+            }
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <div className='w-full'>
             <Swiper
@@ -14,8 +31,8 @@ export default function LastCommentsSwiper() {
                     delay: 8000,
                     disableOnInteraction: false,
                 }}
-                spaceBetween={20}
-                slidesPerView={1.3}
+                spaceBetween={30}
+                slidesPerView={slidesPerView}
             >
                 {LastComments.map((comm, index) => (
                     <SwiperSlide key={index}>

@@ -20,7 +20,6 @@ export default function HomePage() {
           Oda Seç
         </button>
       </div>
-
       <section className='w-full flex flex-col xl:flex-row xl:justify-between gap-6'>
         {/** Hero Section Swiper */}
         <div className='w-full xl:hidden'>
@@ -29,33 +28,136 @@ export default function HomePage() {
         <TabsComponent />
       </section>
       <RoomDetailsSection />
-      <section className='flex flex-col gap-2'>
-        <h3 className='font-semibold text-sm text-customBlue2'>Jollytur Değerlendirmeleri</h3>
-        <div className='flex flex-col gap-3'>
-          <div className='flex gap-4 font-semibold text-customBlue2'>
-            <span className='text-[32px]'>4.5</span>
-            <div className='flex flex-col justify-center gap-0'>
-              <span className='text-xs'>Mükemmel</span>
-              <span className='text-[10px]'>+1200 Değerlendirme</span>
+      {/**JollyTur Reviews Section */}
+      <section className='flex justify-between gap-24'>
+        <div className='flex flex-col gap-16 flex-shrink-0'>
+          <section className='flex flex-col gap-2'>
+            <h3 className='font-semibold text-sm text-customBlue2 xl:text-2xl'>Jollytur Değerlendirmeleri</h3>
+            <div className='flex flex-col gap-3'>
+              <div className='flex gap-4 font-semibold text-customBlue2'>
+                <span className='text-[32px] xl:text-[60px]'>4.5</span>
+                <div className='flex flex-col justify-center gap-0'>
+                  <span className='text-xs xl:text-base'>Mükemmel</span>
+                  <span className='text-[10px] xl:text-sm'>+1200 Değerlendirme</span>
+                </div>
+              </div>
+              <div className='flex flex-col gap-3 text-customDark3 text-xs *:flex *:items-center *:gap-3.5'>
+                <div>
+                  <IconComponent name="persons" alt="İnsan İkonu" className='size-4' />
+                  4.9 son 10 misafirin ortalama puanıdır
+                </div>
+                <div>
+                  <IconComponent name="dateThin" alt="Tarih İkonu" className='size-4' />
+                  <p><span className='text-customGreen'>Sürekli olarak mükemmel</span> son 6 ayın reytingleri</p>
+                </div>
+                <div>
+                  <IconComponent name="like" alt="Beğeni İkonu" className='size-4' />
+                  <p><span className='text-customGreen'>%62</span> misafirler bu tesisi beğendi</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className='flex flex-col gap-3 text-customDark3 text-xs *:flex *:items-center *:gap-3.5'>
-            <div>
-              <IconComponent name="persons" alt="İnsan İkonu" className='size-4' />
-              4.9 son 10 misafirin ortalama puanıdır
+          </section>
+          <section className='max-w-[331px] w-full hidden xl:flex gap-6 text-customBlue2 *:flex *:flex-col *:items-center *:gap-2'>
+            <div className=''>
+              <div className='flex items-center justify-center size-[47px] bg-customBlue4 rounded-full '>
+                <IconComponent name='businessOutline' alt='İş Çantası İkonu' className='size-6' />
+              </div>
+              <span className='text-xs font-bold'>İş</span>
+              <span className='text-xs'>22%</span>
             </div>
-            <div>
-              <IconComponent name="dateThin" alt="Tarih İkonu" className='size-4' />
-              <p><span className='text-customGreen'>Sürekli olarak mükemmel</span> son 6 ayın reytingleri</p>
+            <div className=''>
+              <div className='flex items-center justify-center size-[47px] bg-customBlue4 rounded-full '>
+                <IconComponent name='family' alt='Aile İkonu' className='size-[29px]' />
+              </div>
+              <span className='text-xs font-bold'>Aile</span>
+              <span className='text-xs'>30%</span>
             </div>
-            <div>
-              <IconComponent name="like" alt="Beğeni İkonu" className='size-4' />
-              <p><span className='text-customGreen'>%62</span> misafirler bu tesisi beğendi</p>
+            <div className=''>
+              <div className='flex items-center justify-center size-[47px] bg-customBlue4 rounded-full '>
+                <IconComponent name='heart' alt='Kalp İkonu' className='size-[23px]' />
+              </div>
+              <span className='text-xs font-bold'>Çift</span>
+              <span className='text-xs'>31%</span>
             </div>
-          </div>
+            <div className=''>
+              <div className='flex items-center justify-center size-[47px] bg-customBlue4 rounded-full '>
+                <IconComponent name='group' alt='Grup İkonu' className='size-6' />
+              </div>
+              <span className='text-xs font-bold'>Grup</span>
+              <span className='text-xs'>11%</span>
+            </div>
+            <div className=''>
+              <div className='flex items-center justify-center size-[47px] bg-customBlue4 rounded-full '>
+                <IconComponent name='personOutline' alt='Kişi İkonu' className='w-4 h-[18px]' />
+              </div>
+              <span className='text-xs font-bold'>Tek</span>
+              <span className='text-xs'>22%</span>
+            </div>
+          </section>
+        </div>
+        <div className=' hidden xl:flex flex-col w-full gap-10'>
+          <section className='flex flex-col gap-2 *:text-customBlue2'>
+            <h3 className='font-semibold text-base'>Değerlendirme Özeti</h3>
+            <div className='max-w-[669px] w-full grid grid-cols-2 gap-x-6 gap-y-3'>
+              <div className='w-full flex flex-col gap-3'>
+                <div className='w-full flex justify-between items-center'>
+                  <span className='text-xs'>Olanaklar</span>
+                  <span className='text-sm'>4.9</span>
+                </div>
+                <div className='relative w-full h-1.5 rounded-[20px] bg-customDark2/80'>
+                  <div className='w-[98%] h-full rounded-[20px] bg-customBlue5' />
+                </div>
+              </div>
+
+              <div className='w-full flex flex-col gap-2'>
+                <div className='w-full flex justify-between items-center'>
+                  <span className='text-xs'>Hijyen</span>
+                  <span className='text-sm'>4.0</span>
+                </div>
+                <div className='relative w-full h-1.5 rounded-[20px] bg-customDark2/80'>
+                  <div className='w-[80%] h-full rounded-[20px] bg-customBlue5' />
+                </div>
+              </div>
+
+              <div className='w-full flex flex-col gap-2'>
+                <div className='w-full flex justify-between items-center'>
+                  <span className='text-xs'>Odalar</span>
+                  <span className='text-sm'>4.5</span>
+                </div>
+                <div className='relative w-full h-1.5 rounded-[20px] bg-customDark2/80'>
+                  <div className='w-[90%] h-full rounded-[20px] bg-customBlue5' />
+                </div>
+              </div>
+
+              <div className='w-full flex flex-col gap-2'>
+                <div className='w-full flex justify-between items-center'>
+                  <span className='text-xs'>Konum</span>
+                  <span className='text-sm'>4.0</span>
+                </div>
+                <div className='relative w-full h-1.5 rounded-[20px] bg-customDark2/80'>
+                  <div className='w-[80%] h-full rounded-[20px] bg-customBlue5' />
+                </div>
+              </div>
+
+              <div className='w-full flex flex-col gap-2'>
+                <div className='w-full flex justify-between items-center'>
+                  <span className='text-xs'>Yemekler</span>
+                  <span className='text-sm'>4.0</span>
+                </div>
+                <div className='relative w-full h-1.5 rounded-[20px] bg-customDark2/80'>
+                  <div className='w-[80%] h-full rounded-[20px] bg-customBlue5' />
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <section className='hidden xl:flex w-full max-w-[856px] flex-col gap-3 '>
+            <h3 className='font-semibold text-base text-customBlue2'>Son Yorumlar</h3>
+            <LastCommentsSwiper />
+          </section>
         </div>
       </section>
-      <section className='flex flex-col gap-3'>
+      <section className='flex flex-col gap-3 xl:hidden'>
         <h3 className='font-semibold text-sm text-customBlue2'>Son Yorumlar</h3>
         <LastCommentsSwiper />
       </section>
